@@ -22,7 +22,7 @@ const ToDoList = new Vue ({
   name: "ToDo_List",
   el: "#todo-list",
   data: {
-    task: [
+    tasks: [
       {text: "Fare la spesa", done: false},
       {text: "Studiare", done: true},
       {text: "Riordinare la stanza", done: false},

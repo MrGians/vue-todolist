@@ -1,7 +1,10 @@
 /*********** Generics ***********/
 header {background-color: rgb(179, 142, 62);}
 body {background-color: rgb(170, 46, 46);}
-
+ul {
+    max-width: 70%;
+    margin: 2.5rem auto;
+}
 
 /*********** TO DO LIST ***********/
 

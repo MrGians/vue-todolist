@@ -27,7 +27,16 @@
 
     <!-- To Do List Section -->
     <section id="todo-list">
-        
+        <div class="container">
+
+            <ul class="list-group">
+                <li v-for="task in tasks" class="list-group-item">
+                    <span v-if="task.done">{{task.text}}</span>
+                    <del v-else>{{task.text}}</del>
+                </li>
+                
+            </ul>
+        </div>
     </section>
     <!-- JS Script -->
     <script src="js/script.js"></script>
