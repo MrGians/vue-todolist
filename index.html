@@ -39,7 +39,7 @@
                 </li>
                 <li class="list-group-item">
                     <div class="input-group">
-                        <input v-model="newTask" type="text" class="form-control" placeholder="Inserisci il tuo Task">
+                        <input v-model="newTask" @keyup.enter="addNewTask" type="text" class="form-control" placeholder="Inserisci il tuo Task">
                         <button @click="addNewTask" class="btn btn-success" type="button" id="button-addon2">Aggiungi Task</button>
                     </div>                      
                 </li>
