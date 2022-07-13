@@ -22,6 +22,7 @@ const ToDoList = new Vue ({
   name: "ToDo_List",
   el: "#todo-list",
   data: {
+    newTask: "",
     tasks: [
       {text: "Fare la spesa", done: false},
       {text: "Studiare", done: true},
@@ -32,5 +33,9 @@ const ToDoList = new Vue ({
   },
   methods: {
     removeTask(i){this.tasks.splice(i, 1);},
+    addNewTask(){
+      this.tasks.push({text: this.newTask, done: false});
+      this.newTask = "";
+    }
   },
 });

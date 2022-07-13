@@ -32,10 +32,16 @@
             <ul class="list-group">
                 <li v-for="(task, i) in tasks" class="list-group-item">
                     <div>
-                        <span v-if="task.done">{{task.text}}</span>
+                        <span v-if="!task.done">{{task.text}}</span>
                         <del v-else>{{task.text}}</del>
                     </div>
                     <i @click="removeTask(i)" class="fa-regular fa-rectangle-xmark fa-2x"></i>
+                </li>
+                <li class="list-group-item">
+                    <div class="input-group">
+                        <input v-model="newTask" type="text" class="form-control" placeholder="Inserisci il tuo Task">
+                        <button @click="addNewTask" class="btn btn-success" type="button" id="button-addon2">Aggiungi Task</button>
+                    </div>                      
                 </li>
             </ul>
         </div>
