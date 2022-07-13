@@ -30,5 +30,7 @@ const ToDoList = new Vue ({
       {text: "Aggiustare il ventilatore", done: true},
     ],
   },
-  methods: {},
+  methods: {
+    removeTask(i){this.tasks.splice(i, 1);},
+  },
 });

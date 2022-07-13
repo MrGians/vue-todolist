@@ -30,11 +30,13 @@
         <div class="container">
 
             <ul class="list-group">
-                <li v-for="task in tasks" class="list-group-item">
-                    <span v-if="task.done">{{task.text}}</span>
-                    <del v-else>{{task.text}}</del>
+                <li v-for="(task, i) in tasks" class="list-group-item">
+                    <div>
+                        <span v-if="task.done">{{task.text}}</span>
+                        <del v-else>{{task.text}}</del>
+                    </div>
+                    <i @click="removeTask(i)" class="fa-regular fa-rectangle-xmark fa-2x"></i>
                 </li>
-                
             </ul>
         </div>
     </section>

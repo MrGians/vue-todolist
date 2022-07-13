@@ -1,10 +1,28 @@
 /*********** Generics ***********/
 header {background-color: rgb(179, 142, 62);}
+
 body {background-color: rgb(170, 46, 46);}
-ul {
+
+
+/*********** TO DO LIST ***********/
+#todo-list ul {
     max-width: 70%;
     margin: 2.5rem auto;
 }
 
-/*********** TO DO LIST ***********/
+#todo-list ul li {
+    display: flex;
+    justify-content: space-between;
+}
 
+#todo-list li span, #todo-list li del {cursor: pointer;}
+
+
+/* Delete Task button */
+#todo-list .fa-rectangle-xmark {
+    cursor: pointer;
+    color: grey;
+    transition: color 0.3s linear;
+}
+
+#todo-list .fa-rectangle-xmark:hover {color: red;}
